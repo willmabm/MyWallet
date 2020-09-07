@@ -19,6 +19,13 @@ class TransferController extends Controller
         $transfer->wallet_id = $request->wallet_id;
         $transfer->save();
 
-        return response()->json($transfer, 201);
+        //return response()->json($transfer, 201);
+
+        return response()->json([
+            'id' => $transfer->id, 
+            'description' => $request->description, 
+            'amount' => $transfer->amount, 
+            'wallet_id'=>$transfer->wallet_id 
+        ], 201);
     }
 }
