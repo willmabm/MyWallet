@@ -47,7 +47,7 @@ export class Example extends Component{
                 money: data.money,
                 transfers: data.transfers
             })
-            console.log(this.state);
+            //console.log(this.state);
         } catch (error) {
             
         }
@@ -55,7 +55,7 @@ export class Example extends Component{
 
     // Actualizamos el state del form
     handleChange(e){
-        console.log(e.target.value)
+        //console.log(e.target.value)
         this.setState({
             form:{
                 ...this.state.form,
